@@ -10,7 +10,12 @@
 
 <!-- content » page -->
 
+
   <div class="content page">
+
+  <?php tmbr_load_template( 'partials/atom/button.php', array('class' => '') ); ?>
+  <?php tmbr_load_template( 'partials/atom/button.php', array('class' => '-orange') ); ?>
+  <?php tmbr_load_template( 'partials/atom/button.php', array('class' => '-orange -large') ); ?>
 
     <? if (have_posts() ) : while (have_posts()) : the_post(); ?>
       <section>

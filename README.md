@@ -1,4 +1,11 @@
-<img src="/assets/images/wpseed.png" width="518"/>
+## TMBR Atomic WPSeed
+TMBR will be bring Atomic Desing principles into the WPSeed theme starter
+
+http://atomicdesign.bradfrost.com/
+https://www.lullabot.com/articles/bem-atomic-design-a-css-architecture-worth-loving
+http://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187
+https://discourse.roots.io/t/pattern-lab/2135
+https://github.com/pattern-lab/edition-node-gulp
 
 **Version:** 0.12.2
 

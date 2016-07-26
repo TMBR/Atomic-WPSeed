@@ -1,0 +1,1 @@
+ <button type="button" class="btn<?php if( isset($class) ){ echo( ' '. $class ); }?>">Click Me!</button>

@@ -1,0 +1,117 @@
+/**
+ * Nav CSS File
+ * Contains all navigation related styles
+ *
+ * @author      Flurin Dürst
+ * @version     1.5.0
+ * @since       WPSeed 0.1
+ *
+ */
+
+
+/* NAV
+/===================================================== */
+
+nav {
+  z-index: 210;
+  font-size: 2rem;
+  font-weight: 700;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    list-style-type: none;
+    a {
+      color: $color_nav;
+    }
+    a:hover {
+      color: $color_nav_hover;
+    }
+    &.current_page_item,
+    &.current_page_parent,
+    &.current-page-ancestor,
+    &.current_page_item a,
+    &.current_page_parent a,
+    &.current-page-ancestor a {
+      color: $color_nav-active;
+    }
+    + li:before{
+      padding: 0 1.5rem;
+      color: $color_nav_spacer;
+      content: ' | ';
+    }
+  }
+}
+
+/* MOBILE NAV
+/===================================================== */
+@include desktop {
+  #hamburger {
+    display: none;
+  }
+}
+@include mobile {
+  .top {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+    #hamburger {
+      // » https://jonsuh.com/hamburgers/
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      z-index: 260;
+      display: block;
+      height: 4rem;
+      cursor: pointer;
+      &.is-active {
+        z-index: 300;
+      }
+      .hamburger-box {
+        width: 35px;
+        .hamburger-inner,
+        .hamburger-inner:before,
+        .hamburger-inner:after {
+          width: 35px;
+          height: 5px;
+          background-color: $color_grey;
+          border-radius: 1px;
+        }
+      }
+    }
+  }
+  #nav_main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    background-color: white;
+    opacity: 1;
+    transition: .5s;
+    pointer-events: initial;
+    &.hiddenmobile {
+      opacity: 0;
+      pointer-events: none;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 6rem; // = x icon height
+      padding: 0;
+      li {
+        padding: 2rem 0;
+        font-size: 4rem;
+        text-align: center;
+        list-style-type: none;
+        + li:before{
+          padding: 0;
+          content: '';
+        }
+      }
+    }
+  }
+}
