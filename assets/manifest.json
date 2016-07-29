@@ -2,8 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/essentials.js",
-        "scripts/main.js"
+        "scripts/modules/*.js",
+        "scripts/Control.js"
       ],
       "main": true
     },

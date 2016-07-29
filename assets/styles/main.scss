@@ -1,7 +1,7 @@
 /**
  * Main CSS File
  * Merges all .scss files before they're processed by gulp
- * included external sources: Bower, Normalize
+ * included external sources: Bower, Normalize, http://getskeleton.com/
  *
  * @author      Flurin Dürst
  * @version     1.2
@@ -14,7 +14,7 @@
 
 /* VARS
 /===================================================== */
-@import 'vars';
+@import 'variables';
 
 /* RESPONSIVE
 /===================================================== */
@@ -23,13 +23,22 @@
 /* 00_base
 /===================================================== */
 @import '00_base/normalize';
-@import '00_base/root';
+@import "00_base/base-styles";
+@import "00_base/functions";
 @import '00_base/grid';
-@import '00_base/topography';
+@import '00_base/root';
+@import "00_base/utils";
+@import "00_base/typography";
+@import "00_base/media-queries";
 
 /* 01_atom
 /===================================================== */
-@import '01_atom/a-buttons';
+@import "01_atom/a-buttons";
+@import "01_atom/a-forms";
+@import "01_atom/a-lists";
+@import "01_atom/a-code";
+@import "01_atom/a-tables";
+@import "01_atom/a-spacing";
 
 /* 02_molecule
 /===================================================== */
@@ -51,8 +60,6 @@
 /===================================================== */
 @import '05_page/p-blog';
 @import '05_page/p-home';
-
-
 
 
 /* STYLES
