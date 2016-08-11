@@ -21,7 +21,9 @@
     echo '<pre>'.var_dump($var).'</pre>';
     die();
   }
-
+  function debug($var) {
+    echo '<pre>'.print_r($var).'</pre>';
+  }
   /* is AJAX/PJAX Request
   /------------------------*/
   function is_ajax_request() {
